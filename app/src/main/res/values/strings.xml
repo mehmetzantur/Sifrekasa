@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Sifrekasa</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="fa_user">&#xf007;</string>
+    <string name="fa_eraser">&#xf12d;</string>
+    <string name="fa_cog">&#xf013;</string>
+    <string name="fa_search">&#xf002;</string>
+    <string name="fa_plus">&#xf067;</string>
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="tabs">
+        <item>Tab1</item>
+        <item>Tab2</item>
+        <item>Tab3</item>
+    </string-array>
+
+</resources>
