@@ -55,15 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnAbout = (Button) findViewById(R.id.btnAbout);
-        Typeface fontbtnAbout = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-        btnAbout.setTypeface(fontbtnAbout);
-        btnAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
 
         Button btnSettings = (Button) findViewById(R.id.btnSettings);
         Typeface fontbtnSettings = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");

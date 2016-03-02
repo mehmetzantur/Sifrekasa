@@ -10,20 +10,46 @@
     android:orientation="vertical"
     android:weightSum="1.0">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@color/redapp"
         android:orientation="horizontal"
         android:weightSum="1">
+
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:textSize="18dp"
+            android:textColor="@drawable/action_btn_style"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fa_search" />
+
+
+        <Button
+            android:id="@+id/btnSearch2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:textSize="18dp"
+            android:textColor="@drawable/action_btn_style"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fa_search" />
+
 
         <Button
             android:id="@+id/btnAddNew"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
@@ -31,43 +57,23 @@
             android:text="@string/fa_plus" />
 
         <Button
-            android:id="@+id/btnSearch"
+            android:id="@+id/btnSettings2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
             android:layout_gravity="center_horizontal"
-            android:text="@string/fa_search" />
-
-        <ImageView
-            android:id="@+id/Logo"
-            android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="0.2"
-            android:src="@drawable/logowhite" />
-
-        <Button
-            android:id="@+id/btnAbout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="25dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fa_user" />
+            android:text="@string/fa_cog" />
 
         <Button
             android:id="@+id/btnSettings"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
@@ -75,6 +81,7 @@
             android:text="@string/fa_cog" />
 
     </LinearLayout>
+
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
@@ -93,5 +100,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white" />
+
+
+    
 
 </LinearLayout>
