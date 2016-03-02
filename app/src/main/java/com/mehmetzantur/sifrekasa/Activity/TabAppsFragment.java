@@ -37,7 +37,7 @@ public class TabAppsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tabapps, container, false);
-        TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
+        TextView tvTitle = (TextView) view.findViewById(R.id.tvTitleApps);
         tvTitle.setText("Fragment #" + mPage);
         return view;
     }

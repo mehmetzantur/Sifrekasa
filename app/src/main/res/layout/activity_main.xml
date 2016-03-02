@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1"
+    android:background="@color/lightwhiteapp"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:gravity="center_horizontal"
@@ -79,9 +79,14 @@
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
         app:pstsShouldExpand="true"
-        app:pstsTextAllCaps="true"
         android:layout_width="match_parent"
-        android:layout_height="48dp" />
+        android:layout_height="35dp"
+        android:textColor="#000000"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsDividerColor="@color/whiteapp"
+        app:pstsIndicatorColor="@color/redapp"
+        app:pstsTabPaddingLeftRight="14dp">
+    </com.astuetz.PagerSlidingTabStrip>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
