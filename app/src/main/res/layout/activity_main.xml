@@ -10,75 +10,70 @@
     android:orientation="vertical"
     android:weightSum="1.0">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:background="@color/redapp"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         android:weightSum="1">
 
 
-        <Button
-            android:id="@+id/btnSearch"
+        <ImageView
+            android:id="@+id/Logo"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="18dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/fa_search" />
+            android:layout_weight="0.7"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
 
+            android:scaleType="fitStart"
+            android:src="@drawable/logoandtext" />
 
-        <Button
-            android:id="@+id/btnSearch2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="18dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fa_search" />
 
 
         <Button
             android:id="@+id/btnAddNew"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="18dp"
+            android:layout_weight="0.1"
+            android:textSize="15dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
             android:layout_gravity="center_horizontal"
             android:text="@string/fa_plus" />
 
+
+
         <Button
-            android:id="@+id/btnSettings2"
+            android:id="@+id/btnSettings"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="18dp"
+            android:layout_weight="0.1"
+            android:textSize="15dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
             android:layout_gravity="center_horizontal"
             android:text="@string/fa_cog" />
 
+
         <Button
-            android:id="@+id/btnSettings"
+            android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:textSize="18dp"
+            android:layout_weight="0.1"
+            android:textSize="15dp"
             android:textColor="@drawable/action_btn_style"
             style="?android:attr/borderlessButtonStyle"
             android:background="?android:selectableItemBackground"
             android:layout_gravity="center_horizontal"
-            android:text="@string/fa_cog" />
+            android:text="@string/fa_search" />
+
 
     </LinearLayout>
 
@@ -102,6 +97,6 @@
         android:background="@android:color/white" />
 
 
-    
+
 
 </LinearLayout>

@@ -6,14 +6,17 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.mehmetzantur.sifrekasa.R;
 
 import org.w3c.dom.Text;
@@ -23,11 +26,28 @@ import org.w3c.dom.Text;
  */
 public class MainActivity extends AppCompatActivity {
 
+    SlidingMenu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       /*  SLIDING MENU */
+        menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.RIGHT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+        menu.setShadowWidth(5);
+        menu.setFadeDegree(0.0f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        DisplayMetrics dm=new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int width=dm.widthPixels;
+        double NewWidth=width*.5;
+        menu.setBehindWidth((int)NewWidth);
+        menu.setMenu(R.layout.activity_search);
+
+
 
         final PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         final LinearLayout view = (LinearLayout) tabStrip.getChildAt(0);
@@ -51,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                menu.toggle();
             }
         });
 
@@ -66,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
         // Get the ViewPager and set it's PagerAdapter so that it can display items
@@ -119,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
     public void setUpTabStrip(){
 
         Toast.makeText(MainActivity.this,
-                 "hop: " , Toast.LENGTH_SHORT).show();
+                "Hoşgeldiniz... " , Toast.LENGTH_SHORT).show();
 
         //your other customizations related to tab strip...blahblah
         // Set first tab selected

@@ -9,13 +9,6 @@
     <string name="fa_cog">&#xf013;</string>
     <string name="fa_search">&#xf002;</string>
     <string name="fa_plus">&#xf067;</string>
-
-    <string name="title_activity_main">MainActivity</string>
-
-    <string-array name="tabs">
-        <item>Tab1</item>
-        <item>Tab2</item>
-        <item>Tab3</item>
-    </string-array>
+    <string name="fa_close">&#xf00d;</string>
 
 </resources>
