@@ -11,4 +11,13 @@
     <string name="fa_plus">&#xf067;</string>
     <string name="fa_close">&#xf00d;</string>
 
+
+
+    <string-array name="Categories">
+        <item>Web Siteleri</item>
+        <item>Uygulamalar</item>
+        <item>Banka Hesapları</item>
+        <item>Diğer</item>
+    </string-array>
+
 </resources>

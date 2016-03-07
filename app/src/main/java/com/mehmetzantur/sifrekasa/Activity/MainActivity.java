@@ -1,23 +1,35 @@
 package com.mehmetzantur.sifrekasa.Activity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.mehmetzantur.sifrekasa.Model.DBHelper;
 import com.mehmetzantur.sifrekasa.R;
+import android.view.ViewGroup.LayoutParams;
 
 import org.w3c.dom.Text;
 
@@ -44,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width=dm.widthPixels;
         double NewWidth=width*.5;
-        menu.setBehindWidth((int)NewWidth);
+        menu.setBehindWidth((int) NewWidth);
         menu.setMenu(R.layout.activity_search);
 
 
@@ -61,8 +73,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+                showAddPopup();
+
+
             }
         });
+
+
 
 
         Button btnSearch = (Button) findViewById(R.id.btnSearch);
@@ -72,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 menu.toggle();
+                EditText txtSearch = (EditText) findViewById(R.id.txtSearch);
+                txtSearch.setFocusableInTouchMode(true);
+                txtSearch.requestFocus();
             }
         });
 
@@ -138,6 +159,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+
+
+
+
+
+
+
     public void setUpTabStrip(){
 
         Toast.makeText(MainActivity.this,
@@ -160,5 +191,64 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
+
+
+    protected void showAddPopup() {
+
+
+
+
+        String[] Categories = {"Web Siteleri", "Uygulamalar", "Banka Hesapları","Diğer"};
+
+        // get prompts.xml view
+        LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+        final View promptView = layoutInflater.inflate(R.layout.activity_add, null);
+
+        Spinner spin = (Spinner) promptView.findViewById(R.id.spnrSelectCategory);;
+
+
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(MainActivity.this,
+                        android.R.layout.simple_spinner_item, Categories);
+        //I get the error in the following line:
+        spin.setAdapter(adapter);
+
+
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setView(promptView);
+
+        //final EditText editText = (EditText) promptView.findViewById(R.id.edittext);
+        // setup a dialog window
+        alertDialogBuilder.setCancelable(true)
+                .setPositiveButton("Kaydet", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+
+                    }
+                });
+
+        // create an alert dialog
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
