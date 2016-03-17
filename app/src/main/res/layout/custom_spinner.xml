@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/spinItemIcon"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:textSize="18dp"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"></TextView>
+
+
+    <TextView
+        android:id="@+id/spinItemText"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="dsa"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"></TextView>
+
+</LinearLayout>

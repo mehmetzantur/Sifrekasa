@@ -10,14 +10,15 @@
     <string name="fa_search">&#xf002;</string>
     <string name="fa_plus">&#xf067;</string>
     <string name="fa_close">&#xf00d;</string>
+    <string name="fa_arrow_left">&#xf060;</string>
+    <string name="fa_globe">&#xf0ac;</string>
+    <string name="fa_android">&#xf17b;</string>
+    <string name="fa_credit_card">&#xf09d;</string>
+    <string name="fa_folder">&#xf07b;</string>
+    <string name="fa_save">&#xf0c7;</string>
+    <string name="fa_eye">&#xf06e;</string>
+    <string name="fa_eye_slash">&#xf070;</string>
 
 
-
-    <string-array name="Categories">
-        <item>Web Siteleri</item>
-        <item>Uygulamalar</item>
-        <item>Banka Hesapları</item>
-        <item>Diğer</item>
-    </string-array>
-
+    <string name="option">Select your cuisine</string>
 </resources>

@@ -2,6 +2,7 @@ package com.mehmetzantur.sifrekasa.Activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,6 +20,7 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
@@ -29,6 +31,7 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.mehmetzantur.sifrekasa.Model.DBHelper;
 import com.mehmetzantur.sifrekasa.R;
+
 import android.view.ViewGroup.LayoutParams;
 
 import org.w3c.dom.Text;
@@ -52,18 +55,16 @@ public class MainActivity extends AppCompatActivity {
         menu.setShadowWidth(5);
         menu.setFadeDegree(0.0f);
         menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-        DisplayMetrics dm=new DisplayMetrics();
+        DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width=dm.widthPixels;
-        double NewWidth=width*.5;
+        int width = dm.widthPixels;
+        double NewWidth = width * .5;
         menu.setBehindWidth((int) NewWidth);
         menu.setMenu(R.layout.activity_search);
 
 
-
         final PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         final LinearLayout view = (LinearLayout) tabStrip.getChildAt(0);
-
 
 
         Button btnAddNew = (Button) findViewById(R.id.btnAddNew);
@@ -72,15 +73,9 @@ public class MainActivity extends AppCompatActivity {
         btnAddNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                showAddPopup();
-
-
+                startActivity(new Intent(getApplicationContext(), AddActivity.class));
             }
         });
-
-
 
 
         Button btnSearch = (Button) findViewById(R.id.btnSearch);
@@ -97,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         Button btnSettings = (Button) findViewById(R.id.btnSettings);
         Typeface fontbtnSettings = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         btnSettings.setTypeface(fontbtnSettings);
@@ -107,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
         // Get the ViewPager and set it's PagerAdapter so that it can display items
@@ -160,30 +152,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
-
-    public void setUpTabStrip(){
+    public void setUpTabStrip() {
 
         Toast.makeText(MainActivity.this,
-                "Hoşgeldiniz... " , Toast.LENGTH_SHORT).show();
+                "Hoşgeldiniz... ", Toast.LENGTH_SHORT).show();
 
         //your other customizations related to tab strip...blahblah
         // Set first tab selected
         PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         LinearLayout view2;
 
-        view2 = ((LinearLayout)tabStrip.getChildAt(0));
-        for(int i=0; i < view2.getChildCount(); i++){
+        view2 = ((LinearLayout) tabStrip.getChildAt(0));
+        for (int i = 0; i < view2.getChildCount(); i++) {
             TextView tv = (TextView) view2.getChildAt(i);
 
-            if(i == 0){
+            if (i == 0) {
                 tv.setTextColor(Color.RED);
             } else {
                 tv.setTextColor(Color.LTGRAY);
@@ -194,61 +177,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-    protected void showAddPopup() {
-
-
-
-
-        String[] Categories = {"Web Siteleri", "Uygulamalar", "Banka Hesapları","Diğer"};
-
-        // get prompts.xml view
-        LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
-        final View promptView = layoutInflater.inflate(R.layout.activity_add, null);
-
-        Spinner spin = (Spinner) promptView.findViewById(R.id.spnrSelectCategory);;
-
-
-        ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(MainActivity.this,
-                        android.R.layout.simple_spinner_item, Categories);
-        //I get the error in the following line:
-        spin.setAdapter(adapter);
-
-
-
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-        alertDialogBuilder.setView(promptView);
-
-        //final EditText editText = (EditText) promptView.findViewById(R.id.edittext);
-        // setup a dialog window
-        alertDialogBuilder.setCancelable(true)
-                .setPositiveButton("Kaydet", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-
-
-                    }
-                });
-
-        // create an alert dialog
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

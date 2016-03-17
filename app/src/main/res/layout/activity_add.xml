@@ -8,14 +8,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="35dp"
         android:background="@color/redapp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btnAddNewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:textSize="15dp"
+            android:textColor="@drawable/action_btn_style"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fa_arrow_left" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.4"
             android:text="Şifre Ekle"
             android:textColor="@color/lightwhiteapp"
             android:textSize="13dp"
@@ -24,41 +37,105 @@
             android:layout_gravity="center_vertical"
             android:id="@+id/textView" />
 
+        <Button
+            android:id="@+id/btnAddNewSave"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:textSize="15dp"
+            android:textColor="@drawable/action_btn_style"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fa_save" />
 
     </LinearLayout>
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
+        android:background="@android:color/white"
         android:layout_weight="1"
-        android:orientation="horizontal">
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kategori:"
-            android:textColor="@android:color/black"
-            android:textSize="13dp"
-            android:padding="5dp"
-            android:layout_weight="0.5"
-            android:id="@+id/lblSelectCategory" />
-
+        android:orientation="vertical">
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spnrSelectCategory"
-            android:layout_weight="0.5" />
+            android:prompt="@string/option" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:id="@+id/txtAddNewTitle"
+            android:hint="Başlık" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:id="@+id/txtAddNewUsername"
+            android:hint="Kullanıcı Adı" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="Şifre"
+                android:id="@+id/txtAddNewPwd" />
+
+
+            <Button
+                android:id="@+id/btnAddNewShowPwd"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/txtAddNewPwd"
+                android:textSize="20dp"
+                android:textColor="@color/whiteapp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/fa_eye" />
+
+        </RelativeLayout>
 
 
 
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:id="@+id/txtAddNewWebsite"
+            android:hint="Web Sitesi" />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:hint="Not"
+            android:gravity="top"
+            android:id="@+id/txtAddNewNote" />
 
     </LinearLayout>
+
 
 
 </LinearLayout>
