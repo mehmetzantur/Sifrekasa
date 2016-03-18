@@ -22,7 +22,7 @@
         android:id="@+id/spinItemText"
         android:layout_height="wrap_content"
         android:layout_weight="0.1"
-        android:text="dsa"
+        android:textSize="15dp"
         android:gravity="center_vertical|left"
         android:layout_width="match_parent"></TextView>
 

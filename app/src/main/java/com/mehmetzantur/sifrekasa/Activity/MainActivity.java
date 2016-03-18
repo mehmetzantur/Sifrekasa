@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -88,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 EditText txtSearch = (EditText) findViewById(R.id.txtSearch);
                 txtSearch.setFocusableInTouchMode(true);
                 txtSearch.requestFocus();
+                //TODO Tıklandığında klavyeyi aç
+                InputMethodManager inputMethodManager=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
             }
         });
 
@@ -98,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
 

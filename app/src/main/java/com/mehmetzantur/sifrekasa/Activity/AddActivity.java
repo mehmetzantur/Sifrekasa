@@ -42,7 +42,6 @@ public class AddActivity extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-                // TODO Auto-generated method stub
                 String selectedItem = parent.getItemAtPosition(pos).toString();
                 Toast.makeText(AddActivity.this,
                         selectedItem + " is selected", Toast.LENGTH_SHORT)
@@ -51,7 +50,6 @@ public class AddActivity extends Activity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
 
             }
         });
