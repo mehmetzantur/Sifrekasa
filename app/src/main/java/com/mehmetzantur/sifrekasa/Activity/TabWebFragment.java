@@ -39,7 +39,7 @@ public class TabWebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tabweb, container, false);
         TextView tvTitle = (TextView) view.findViewById(R.id.tvTitleWeb);
-        tvTitle.setText("Fragment #" + mPage);
+        tvTitle.setText("Fragmentooo #" + mPage);
         return view;
     }
 }

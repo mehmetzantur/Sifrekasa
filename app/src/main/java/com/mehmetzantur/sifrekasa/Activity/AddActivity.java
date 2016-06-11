@@ -70,6 +70,16 @@ public class AddActivity extends Activity {
         Button btnAddNewSave = (Button) findViewById(R.id.btnAddNewSave);
         Typeface fontbtnAddNewSave = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         btnAddNewSave.setTypeface(fontbtnAddNewSave);
+        btnAddNewSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+
 
         final Button btnAddNewShowPwd = (Button) findViewById(R.id.btnAddNewShowPwd);
         Typeface fontbtnAddNewShowPwd = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
@@ -90,6 +100,9 @@ public class AddActivity extends Activity {
             }
         });
     }
+
+
+
 
     public class MyAdapter extends ArrayAdapter<String> {
         public MyAdapter(Context ctx, int txtViewResourceId, String[] objects) {

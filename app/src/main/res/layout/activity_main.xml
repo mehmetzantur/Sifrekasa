@@ -11,90 +11,107 @@
     android:weightSum="1.0">
 
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/redapp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:weightSum="1">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/redapp"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:weightSum="1">
 
 
-        <ImageView
-            android:id="@+id/Logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.55"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="5dp"
-            android:scaleType="fitStart"
-            android:src="@drawable/logoandtext" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:id="@+id/txtSearch"
+                    android:hint="@string/fa_search"
+                    android:textColorHint="@color/lightredapp"
+                    android:textSize="15dp"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white"
+                    android:background="?android:selectableItemBackground" />
 
 
+                <Button
+                    android:id="@+id/btnSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:textSize="20dp"
+                    android:textColor="@drawable/action_btn_style"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/fa_cog" />
 
-        <Button
-            android:id="@+id/btnAddNew"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:textSize="20dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fa_plus" />
+            </LinearLayout>
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                app:pstsShouldExpand="true"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textColor="#000000"
+                app:pstsIndicatorHeight="2dp"
+                app:pstsDividerColor="@color/whiteapp"
+                app:pstsIndicatorColor="@color/redapp"
+                app:pstsTabPaddingLeftRight="14dp">
+            </com.astuetz.PagerSlidingTabStrip>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" >
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/redapp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnAddNew"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:textSize="20dp"
+                    android:textColor="@drawable/action_btn_style"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/fa_plus" />
 
 
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btnSettings"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:textSize="20dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fa_cog" />
+        </RelativeLayout>
 
-
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:textSize="20dp"
-            android:textColor="@drawable/action_btn_style"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="?android:selectableItemBackground"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fa_search" />
-
-
-    </LinearLayout>
-
-
-    <com.astuetz.PagerSlidingTabStrip
-        android:id="@+id/tabs"
-        app:pstsShouldExpand="true"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:textColor="#000000"
-        app:pstsIndicatorHeight="2dp"
-        app:pstsDividerColor="@color/whiteapp"
-        app:pstsIndicatorColor="@color/redapp"
-        app:pstsTabPaddingLeftRight="14dp">
-    </com.astuetz.PagerSlidingTabStrip>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white" />
+    </RelativeLayout>
 
 
 

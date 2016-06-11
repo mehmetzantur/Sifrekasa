@@ -78,7 +78,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        EditText txtSearch = (EditText)findViewById(R.id.txtSearch);
+        Typeface fonttxtSearch = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        txtSearch.setTypeface(fonttxtSearch);
 
+/*
         Button btnSearch = (Button) findViewById(R.id.btnSearch);
         Typeface fontbtnSearch = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         btnSearch.setTypeface(fontbtnSearch);
@@ -95,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+*/
         Button btnSettings = (Button) findViewById(R.id.btnSettings);
         Typeface fontbtnSettings = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         btnSettings.setTypeface(fontbtnSettings);
