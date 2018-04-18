@@ -7,6 +7,8 @@ Windows Phone uygulaması da mevcut (2015 yılında yayınladığım uygulama 10
 
 Facebook: https://www.facebook.com/Sifrekasa
 
+Android ve Windows Phone işletim sistemine sahip telefonlarda kullanılabilen, native olarak geliştirilmiş, şifre yada özel notların, girişine ayarlanan şifre ile giriş izni veren ve bilgilerin şifreli olarak saklanabildiği bir uygulamadır.
+
 
 Android:
 
