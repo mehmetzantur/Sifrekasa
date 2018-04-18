@@ -1,2 +1,4 @@
 # Sifrekasa
-Sifrekasa Password Case Android Application (Alpha)
+Sifrekasa Şifre Saklama Uygulaması (Windows Phone)
+
+Facebook: https://www.facebook.com/Sifrekasa
